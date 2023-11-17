@@ -7,42 +7,51 @@
     <style>
         body {
             margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .background-image {
+            position: relative;
+            width: 100%;
+            height: 60vh; /* Set the height of the image */
             background-image: url('IMG_20200528_165100.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            background-color: black;
-            font-family: Arial, sans-serif;
         }
 
         .bulletin-container {
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
+            padding: 20px;
             border-radius: 8px;
             text-align: center;
             color: #fff;
-            width: 80%;
-            margin: 50% auto 20px; /* Position the bulletin at the bottom */
-            transform: translateY(50%);
+            position: absolute;
+            bottom: 20px; /* Adjust the distance from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 80%;
         }
 
         .bulletin-container h2 {
-            font-size: 1.5rem; /* Adjust the font size for the heading */
-            margin-bottom: 5px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
         .bulletin-container p {
-            font-size: 1rem; /* Adjust the font size for the paragraph */
+            font-size: 1rem;
             line-height: 1.5;
             margin-top: 5px;
         }
     </style>
 </head>
 <body>
+    <div class="background-image">
+        <!-- You can add more content here -->
+    </div>
     <div class="bulletin-container">
         <h2>El mas calladito se ve mas bonito, I'm Ugly asF</h2>
         <p>This is a mobile-friendly bulletin.</p>
     </div>
 </body>
 </html>
-
