@@ -8,7 +8,7 @@
         body {
             margin: 0;
             background-color: black; /* Set background color */
-            background-image: url('579.jpg'); /* Set background image */
+            background-image: url('your_image_url_here.jpg'); /* Set background image */
             background-size: contain; /* Fit the entire image without stretching */
             background-position: center; /* Center the background image */
             background-repeat: no-repeat; /* Prevent image from repeating */
@@ -21,19 +21,22 @@
 
         .link {
             display: flex;
-            justify-content: center; /* Center-align links horizontally */
-            width: 80%; /* Adjust width of link container */
-            margin-top: 20vh; /* Move links higher up */
+            flex-direction: column; /* Change to column */
+            justify-content: center; /* Center links vertically */
+            align-items: flex-start; /* Align links to the left */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+            width: 30%; /* Adjust width of link container */
+            margin-top: 30vh; /* Move links higher up */
             padding: 20px 0; /* Add padding for better spacing */
         }
 
         .link a {
-            margin: 10px; /* Add space between links */
+            margin: 10px 0; /* Add space between links */
             color: white; /* Set link color */
             text-decoration: none; /* Remove underline from links */
             white-space: nowrap; /* Prevent links from breaking into multiple lines */
             padding: 5px 10px; /* Add padding to links for better readability */
-            display: inline-block; /* Display links side by side */
+            width: 80%; /* Set a specific width for the links */
         }
     </style>
 </head>
@@ -49,4 +52,3 @@
     </div>
 </body>
 </html>
-
