@@ -7,10 +7,11 @@
     <style>
         body {
             margin: 0;
-            background-color: #000; /* Set background color */
+            background-color: black; /* Set background color */
             background-image: url('579.jpg'); /* Set background image */
-            background-size: cover; /* Cover the entire viewport */
-            background-position: center center; /* Center the background image */
+            background-size: contain; /* Fit the entire image without stretching */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent image from repeating */
             height: 100vh; /* Fill the entire viewport height */
             display: flex;
             flex-direction: column;
@@ -21,17 +22,22 @@
         .link {
             display: flex;
             justify-content: center; /* Center-align links horizontally */
+            width: 100%; /* Adjust width of link container */
             margin-top: 20vh; /* Move links higher up */
             padding: 20px 0; /* Add padding for better spacing */
         }
 
         .link a {
             margin: 7px; /* Add space between links */
-            color: #fff; /* Set link color */
+            color: white; /* Set link color */
             text-decoration: none; /* Remove underline from links */
+            white-space: nowrap; /* Prevent links from breaking into multiple lines */
             padding: 5px 10px; /* Add padding to links for better readability */
+            /* Adjust the width of the links below */
+            /* width: 50%; Remove this width property */
+            display: inline-block; /* Display links side by side */
         }
-    </style>
+       </style>
 </head>
 <body>
     <div class="link">
