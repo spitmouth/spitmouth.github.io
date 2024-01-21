@@ -1,51 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPIT MOUTH COMEDY</title>
-    <style>
-        body {
-            margin: 0;
-            background-image: url('IMG_20200528_165100.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: black;
-            font-family: Arial, sans-serif;
-            height: calc(100vh - 200px); /* Adjust the height to leave space for the bulletin */
-        }
+import React from 'react'
 
-        .bulletin-container {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 8px;
-            text-align: center;
-            color: #fff;
-            width: 80%;
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+import styles from './home.module.css'
 
-        .bulletin-container h2 {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-        }
-
-        .bulletin-container p {
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-top: 5px;
-        }
-    </style>
-</head>
-<body>
-    <div class="bulletin-container" id="bulletin">
-        <!-- The content will be loaded here using JavaScript -->
+const Home = (props) => {
+  return (
+    <div className={styles['container']}>
+      <div className={styles['section']}>
+        <div className={styles['case-studies']}>
+          <div className={styles['caption']}>
+            <span className={styles['text']}>
+              <span>written content</span>
+              <br></br>
+            </span>
+            <div className={styles['date-range']}>
+              <span className={styles['text03']}>2024</span>
+            </div>
+          </div>
+          <div className={styles['gallery']}>
+            <div className={styles['row']}>
+              <div className={styles['case']}>
+                <img
+                  alt="image"
+                  src="/study%20%231-1400w.png"
+                  className={styles['image']}
+                />
+                <div className={styles['heading']}>
+                  <span className={styles['text04']}>Perspiciatis</span>
+                  <span className={styles['text05']}>
+                    Lorem ipsum dolor sit amet consectetur adipiscing.
+                  </span>
+                </div>
+              </div>
+              <div className={styles['case1']}>
+                <img
+                  alt="image"
+                  src="/study%20%232-1400w.png"
+                  className={styles['image1']}
+                />
+                <div className={styles['heading1']}>
+                  <span className={styles['text06']}>Nemo voluptatem</span>
+                  <span className={styles['text07']}>
+                    Lorem ipsum dolor sit amet consectetur adipiscing.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className={styles['row1']}>
+              <div className={styles['case2']}>
+                <img
+                  alt="image"
+                  src="/study%20%233-1400w.png"
+                  className={styles['image2']}
+                />
+                <div className={styles['heading2']}>
+                  <span className={styles['text08']}>Dolore magnam</span>
+                  <span className={styles['text09']}>
+                    Lorem ipsum dolor sit amet consectetur adipiscing.
+                  </span>
+                </div>
+              </div>
+              <div className={styles['case3']}>
+                <img
+                  alt="image"
+                  src="/study%20%234-1400w.png"
+                  className={styles['image3']}
+                />
+                <div className={styles['heading3']}>
+                  <span className={styles['text10']}>Tempora</span>
+                  <span className={styles['text11']}>
+                    Lorem ipsum dolor sit amet consectetur adipiscing.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className={styles['row2']}>
+              <div className={styles['case4']}>
+                <img
+                  alt="image"
+                  src="/study%20%235-1400w.png"
+                  className={styles['image4']}
+                />
+                <div className={styles['heading4']}>
+                  <span className={styles['text12']}>Reprehenderit qui</span>
+                  <span className={styles['text13']}>
+                    Lorem ipsum dolor sit amet consectetur adipiscing.
+                  </span>
+                </div>
+              </div>
+              <div className={styles['case5']}>
+                <img
+                  alt="image"
+                  src="/study%20%236-1400w.png"
+                  className={styles['image5']}
+                />
+                <div className={styles['heading5']}>
+                  <span className={styles['text14']}>Ullamco laboris</span>
+                  <span className={styles['text15']}>
+                    Lorem ipsum dolor sit amet consectetur adipiscing.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  )
+}
 
-    <script src="script.js"></script> <!-- JavaScript file -->
-</body>
-</html>
+export default Home
