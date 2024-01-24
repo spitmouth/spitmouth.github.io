@@ -9,14 +9,18 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .spitai-video {
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  width: 387px;
-  bottom: 0px;
-  height: 876px;
+  width: 100%;
+  max-width: 387px;
+  height: auto;
   margin: auto;
-  position: absolute;
-  align-self: flex-start;
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .spitai-video {
+    width: 90%; /* Adjust the width on smaller screens */
+  }
 }
