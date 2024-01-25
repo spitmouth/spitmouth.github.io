@@ -1,153 +1,51 @@
-.gallery-card-gallery-card {
-  width: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.gallery-card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.gallery-card-text {
-  align-self: flex-start;
-  margin-top: var(--dl-space-space-halfunit);
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-halfunit);
-}
-.gallery-card-text1 {
-  color: var(--dl-color-gray-500);
-  align-self: flex-start;
-}
-@media(max-width: 767px) {
-  .gallery-card-gallery-card {
-    flex-direction: column;
-  }
-}
-@media(max-width: 479px) {
-  .gallery-card-image {
-    height: 10rem;
-  }
-  .gallery-card-text {
-    font-weight: 600;
-  }
-  .gallery-card-text1 {
-    color: var(--dl-color-gray-500);
-  }
-}
-
-.gallery-card3-gallery-card {
-  width: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.gallery-card3-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.gallery-card3-text {
-  align-self: flex-start;
-  margin-top: var(--dl-space-space-halfunit);
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-halfunit);
-}
-.gallery-card3-text1 {
-  color: var(--dl-color-gray-500);
-  align-self: flex-start;
-}
-@media(max-width: 767px) {
-  .gallery-card3-gallery-card {
-    flex-direction: column;
-  }
-}
-@media(max-width: 479px) {
-  .gallery-card3-image {
-    height: 10rem;
-  }
-  .gallery-card3-text {
-    font-weight: 600;
-  }
-  .gallery-card3-text1 {
-    color: var(--dl-color-gray-500);
-  }
-}
-
 .spittalkhtml-container {
-  width: 100%;
-  display: flex;
-  overflow: auto;
-  min-height: 100vh;
-  align-items: center;
-  flex-direction: column;
+  /* ... existing styles ... */
+  overflow: hidden; /* Avoid horizontal scrolling */
 }
+
 .spittalkhtml-gallery {
-  width: 100%;
   display: grid;
-  padding: var(--dl-space-space-threeunits);
-  grid-gap: var(--dl-space-space-unit);
-  max-width: var(--dl-size-size-maxwidth);
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  grid-gap: 20px;
+  padding: 20px; /* Consistent padding */
 }
-.spittalkhtml-gallery-card {
-  width: 100%;
+
+/* Styles for all gallery cards */
+.gallery-card-gallery-card, .gallery-card3-gallery-card, .spittalkhtml-gallery-card {
   display: flex;
-  position: relative;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-}
-.spittalkhtml-image {
   width: 100%;
-  height: 100%;
+}
+
+/* Styles for all images */
+.gallery-card-image, .gallery-card3-image, .spittalkhtml-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover;
 }
-.spittalkhtml-text {
-  align-self: flex-start;
-  margin-top: var(--dl-space-space-halfunit);
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-halfunit);
+
+/* Styles for all text */
+.gallery-card-text, .gallery-card3-text, .spittalkhtml-text,
+.gallery-card-text1, .gallery-card3-text1, .spittalkhtml-text1 {
+  text-align: center; /* Center-align text */
+  margin: 10px 0;
 }
-.spittalkhtml-text1 {
-  color: var(--dl-color-gray-500);
-  align-self: flex-start;
-}
-.spittalkhtml-component {
-  text-decoration: none;
-}
-@media(max-width: 991px) {
+
+/* Media Queries */
+@media (max-width: 767px) {
   .spittalkhtml-gallery {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr; /* Single column layout */
   }
 }
-@media(max-width: 767px) {
-  .spittalkhtml-gallery {
-    padding-left: var(--dl-space-space-twounits);
-    padding-right: var(--dl-space-space-twounits);
+
+@media (max-width: 479px) {
+  .gallery-card-image, .gallery-card3-image, .spittalkhtml-image {
+    height: 150px; /* Fixed height for consistency */
   }
-  .spittalkhtml-gallery-card {
-    flex-direction: column;
-  }
-}
-@media(max-width: 479px) {
-  .spittalkhtml-gallery {
-    padding-top: var(--dl-space-space-twounits);
-    padding-left: var(--dl-space-space-unit);
-    padding-right: var(--dl-space-space-unit);
-    padding-bottom: var(--dl-space-space-twounits);
-  }
-  .spittalkhtml-image {
-    height: 10rem;
-  }
-  .spittalkhtml-text {
-    font-weight: 600;
-  }
-  .spittalkhtml-text1 {
-    color: var(--dl-color-gray-500);
+  .gallery-card-text, .gallery-card3-text, .spittalkhtml-text,
+  .gallery-card-text1, .gallery-card3-text1, .spittalkhtml-text1 {
+    font-size: smaller; /* Smaller font size for readability */
   }
 }
