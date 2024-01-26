@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     gallery.addEventListener('touchmove', e => {
-        e.preventDefault(); // Prevent default scroll behavior
         const touchMoveX = e.touches[0].clientX;
         const diffX = startX - touchMoveX;
         gallery.scrollLeft = currentScroll + diffX;
