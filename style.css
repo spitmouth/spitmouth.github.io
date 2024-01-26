@@ -20,7 +20,7 @@ body {
     background-image: url('579.jpg'); /* Set your image as the background */
     background-size: contain; /* Ensure the whole image is visible */
     background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* No repeating the image */
+    background-repeat: repeat; /* No repeating the image */
     height: 100%; /* Full height of the container */
     width: 100%; /* Full width of the container */
     z-index: -1; /* Place the image behind the content */
