@@ -39,7 +39,7 @@ body {
     text-decoration: none;
     color: inherit; /* Inherits white color */
     font-size: 1.5em;
-    margin: 0 10px; /* Spacing between links */
+    margin: 0 50px; /* Spacing between links */
 }
 
 @keyframes fadeIn {
