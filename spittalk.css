@@ -1,51 +1,51 @@
-.spittalkhtml-container {
-  /* ... existing styles ... */
-  overflow: hidden; /* Avoid horizontal scrolling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background for better readability */
 }
 
-.spittalkhtml-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-  grid-gap: 20px;
-  padding: 20px; /* Consistent padding */
+.gallery-container {
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden; /* Hide the overflowed images */
 }
 
-/* Styles for all gallery cards */
-.gallery-card-gallery-card, .gallery-card3-gallery-card, .spittalkhtml-gallery-card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+.gallery {
+    display: flex;
+    width: 100%;
+    scroll-snap-type: x mandatory; /* Enables snapping */
 }
 
-/* Styles for all images */
-.gallery-card-image, .gallery-card3-image, .spittalkhtml-image {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover;
+.gallery-item {
+    flex: 0 0 100%; /* Each item takes 100% of the width */
+    scroll-snap-align: start; /* Snap alignment */
+    position: relative; /* For overlay text positioning */
 }
 
-/* Styles for all text */
-.gallery-card-text, .gallery-card3-text, .spittalkhtml-text,
-.gallery-card-text1, .gallery-card3-text1, .spittalkhtml-text1 {
-  text-align: center; /* Center-align text */
-  margin: 10px 0;
+.gallery-item img {
+    width: 100%; /* Full width images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space under the image */
 }
 
-/* Media Queries */
+/* Optionally, add styles for overlay text on images if needed */
+.gallery-item-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 767px) {
-  .spittalkhtml-gallery {
-    grid-template-columns: 1fr; /* Single column layout */
-  }
+    .gallery-item-text {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
 }
 
-@media (max-width: 479px) {
-  .gallery-card-image, .gallery-card3-image, .spittalkhtml-image {
-    height: 150px; /* Fixed height for consistency */
-  }
-  .gallery-card-text, .gallery-card3-text, .spittalkhtml-text,
-  .gallery-card-text1, .gallery-card3-text1, .spittalkhtml-text1 {
-    font-size: smaller; /* Smaller font size for readability */
-  }
-}
+/* Additional styles for aesthetic improvements can be added here */
