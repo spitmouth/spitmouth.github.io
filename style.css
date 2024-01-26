@@ -22,8 +22,9 @@ body {
     justify-content: center;
     align-items: flex-start; /* Align items to start at the top */
     height: 60%; /* Lower than center */
-    opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
+    width: 100%; /* Full width */
+    opacity: 0; /* Start with links hidden */
+    animation: fadeIn 2s ease-in forwards; /* Fade-in animation */
 }
 
 .link a {
