@@ -1,13 +1,29 @@
 .gallery-container {
-    max-width: 100%;
-    overflow-x: scroll; /* Enable horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; /* Hide overflow to maintain layout */
 }
 
 .gallery {
     display: flex;
-    scroll-snap-type: x mandatory; /* Snapping effect */
-    /* ... other styles ... */
+    flex-wrap: nowrap; /* Ensure images are in a single line */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    width: 100%; /* Full width of container */
 }
 
-/* ... other styles ... */
+.gallery-item {
+    flex: 0 0 auto; /* Do not grow or shrink */
+    margin: 10px; /* Spacing between items */
+    text-align: center; /* Center the content */
+}
+
+.gallery-item img {
+    max-height: 300px; /* Maximum height of images */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space under images */
+    margin: 0 auto; /* Center images within the container */
+}
+
+/* Add additional styling and responsive design adjustments as needed */
